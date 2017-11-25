@@ -1,0 +1,48 @@
+<!-- 
+   Project: Draw an box with arrow
+   1. Draw simple box by <div>
+   2. Use ':after' Pseudo class to create arrow
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8" />
+	<title>Box with Arrow</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" /><!-- for responsive layout  -->
+
+	<!-- Internal CSS  Defined inside the head-->
+	<style type="text/css">
+		.box{
+			position: relative;
+			width: 300px;
+			margin:100px auto;
+			border: 1px solid black;
+			padding: 10px;
+		}
+		.box p{
+			text-align: justify;
+		}
+		.box:after{
+			position: absolute;
+			content: '';
+			width: 20px;
+			height: 20px;
+			background-color: white;
+			left:40%;
+			border: solid;
+			border-width: 1px;
+			border-color: transparent black black transparent;
+			transform: rotate(45deg);
+			z-index: 1;
+		}
+		.box:hover{
+			box-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+		}
+	</style>
+</head>
+<body>
+	<div class="box">
+		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis quas, minima rerum architecto consequuntur nobis ducimus temporibus ipsam. Iusto dolorum nihil saepe odio vero libero quam placeat praesentium aspernatur et?</p>
+	</div><!-- /.box  -->
+</body>
+</html>
